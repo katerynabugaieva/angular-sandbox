@@ -12,7 +12,7 @@ import {
   selector: "[create-directiveBackground]"
 })
 export class BackgroundDirective implements OnInit {
-  @Input() hoverColor: string = "green";
+  @Input("create-directiveBackground") hoverColor: string = "green";
   @Input() defaultColor: string = "transparent";
 
   @HostBinding("style.backgroundColor") background: string;
