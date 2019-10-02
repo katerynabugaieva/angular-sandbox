@@ -1,0 +1,9 @@
+<!--<input class="form-control" [(ngModel)]="carName" placeholder="car name" /> -->
+<!--<input class="form-control" [(ngModel)]="carYear" placeholder="car year" />-->
+
+<input class="form-control" placeholder="car name" #carNameInput />
+<input class="form-control" placeholder="car year" #carYearInput />
+<hr />
+<button class="btn btn-secondary" (click)="addCar(carNameInput)">
+  Add the car
+</button>

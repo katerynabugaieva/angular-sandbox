@@ -1,0 +1,81 @@
+<p>Adding form</p>
+<hr />
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
+<hr />
+<button class="btn btn-success" (click)="changeCarName()">
+  Change the car name
+</button>
+<button class="btn btn-danger" (click)="deleteCar()">
+  Delete the car
+</button>
+<!--
+<p *ngIf="!addCarStatus; else successStatus">not added</p>
+<ng-template #successStatus>
+  <p>added</p>
+</ng-template>
+-->
+<hr />
+
+<div class="list-group">
+  <app-car
+    class="list-group-item"
+    *ngFor="let car of cars"
+    [carItem]="car"
+    [name]="car.name"
+  >
+    <h4 #carHeading class="list-group-item-heading">Name: {{ car.name }}</h4>
+
+    <p class="list-group-item-text">year: {{ car.year }}</p>
+  </app-car>
+</div>
+<!--
+<hr />
+<ul>
+  <li *ngFor="let item of items; let idx = index">
+    <b>{{ idx }}</b> - <i>{{ item.name }}</i>
+  </li>
+</ul>
+<hr />
+-->
+<!--
+<ul>
+  <li *ngFor="let car of cars; let idx = index">
+    <div
+      [ngStyle]="{
+        backgroundColor: (idx + 1) % 2 === 0 ? 'red' : 'green',
+        color: 'white'
+      }"
+      [ngClass]="{ 'big-text': setBigCarText(car) }"
+    >
+      <b>{{ idx + 1 }}</b> - <i>{{ car }}</i>
+    </div>
+  </li>
+</ul>
+-->
+
+<!--
+<ul>
+  <li *ngFor="let item of itemsDate; let idx = index">
+    <b>{{ idx }}</b> - <i>{{ item | date: "medium" }}</i>
+  </li>
+</ul>
+<hr />
+
+-->
+<hr />
+
+<!--
+<input type="text" class="form-control" (input)="onKeyUp($event)" />
+<p>{{ inputTextHTML }}</p>
+
+<input type="text" class="form-control" #myInp (input)="onInput(myInp.value)" />
+<p>{{ inputText }}</p>
+
+<input type="text" class="form-control" (keyup.enter)="onInputP($event)" />
+
+<p>{{ inputTextP }}</p>
+
+<input type="text" class="form-control" [(ngModel)]="inputTextDoubleBinding" />
+<p>{{ inputTextDoubleBinding }}</p>
+
+-->
