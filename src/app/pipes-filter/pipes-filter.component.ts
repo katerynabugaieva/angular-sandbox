@@ -15,4 +15,11 @@ export class PipesFilterComponent {
     { name: "Mersedes", description: "wfm4" },
     { name: "BMW", description: "wfm5" }
   ];
+
+  addCar() {
+    this.cars.push({
+      name: "new car",
+      description: "new d"
+    });
+  }
 }
