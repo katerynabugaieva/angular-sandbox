@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-xs-12">
+    <input
+      type="text"
+      placeholder="add the car"
+      (onCarAdd)="addCarToList($event)"
+    />
+    <ul class="list-group">
+      <li *ngFor="let car of cars" class="list-group-item">
+        <b> {{ car.name }} </b>
+        <div>
+          <button class="btn btn-primary">buy</button>
+          <button class="btn btn-secondary">Cancel</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
