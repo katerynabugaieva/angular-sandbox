@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
+import "rxjs/Rx";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-pipes-filter",
@@ -16,6 +18,7 @@ export class PipesFilterComponent {
     { name: "BMW", description: "wfm5" }
   ];
 
+  asyncTitle = Observable.of("Asynt title 3 sec").delay(3000);
   addCar() {
     this.cars.push({
       name: "new car",
