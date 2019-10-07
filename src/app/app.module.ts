@@ -15,6 +15,8 @@ import { MyTestPipesPipe } from "./my-test-pipes.pipe";
 import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
 import { CarFilterPipe } from "./car-filter.pipe";
 import { CreateServiceComponent } from "./create-service/create-service.component";
+import { CarServiceComponent } from "./create-service/car/car-service.component";
+import { CarAddServiceComponent } from "./create-service/car-add/car-add-service.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CreateServiceComponent } from "./create-service/create-service.componen
     MyTestPipesPipe,
     PipesFilterComponent,
     CarFilterPipe,
-    CreateServiceComponent
+    CreateServiceComponent,
+    CarServiceComponent,
+    CarAddServiceComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
