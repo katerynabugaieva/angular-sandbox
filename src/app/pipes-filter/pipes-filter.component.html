@@ -4,9 +4,12 @@
   <ul class="list-group">
     <li
       class="list-group-item"
-      *ngFor="let car of cars | carFilter: searchCar; let i = index"
+      *ngFor="
+        let car of cars | carFilter: searchCar:'description';
+        let i = index
+      "
     >
-      <b>{{ i + 1 }}</b> {{ car.name }}
+      <b>{{ i + 1 }}</b> {{ car.name }} <i>{{ car.description }}</i>
     </li>
   </ul>
 </div>

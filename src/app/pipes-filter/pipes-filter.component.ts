@@ -8,11 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class PipesFilterComponent {
   searchCar = "";
   cars = [
-    { name: "Ford" },
-    { name: "Mazda" },
-    { name: "Bently" },
-    { name: "Audi" },
-    { name: "Mersedes" },
-    { name: "BMW" }
+    { name: "Ford", description: "wfm" },
+    { name: "Mazda", description: "wfm1" },
+    { name: "Bently", description: "wfm2" },
+    { name: "Audi", description: "wfm3" },
+    { name: "Mersedes", description: "wfm4" },
+    { name: "BMW", description: "wfm5" }
   ];
 }
