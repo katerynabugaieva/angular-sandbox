@@ -10,8 +10,9 @@ import { AddCarComponent } from "./add-car/add-car.component";
 import { CreateDirectiveComponent } from "./create-directive/create-directive.component";
 import { BackgroundDirective } from "./create-directive/directives/background.directive";
 import { PipesComponent } from "./pipes/pipes.component";
-import { PowPipe } from "./create-pipes/pow.pipe.ts";
+import { PowPipe } from "./create-pipes/pow.pipe";
 import { CreatePipesComponent } from "./create-pipes/create-pipes.component";
+import { MyTestPipesPipe } from "./my-test-pipes.pipe";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CreatePipesComponent } from "./create-pipes/create-pipes.component";
     BackgroundDirective,
     PipesComponent,
     CreatePipesComponent,
-    PowPipe
+    PowPipe,
+    MyTestPipesPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
