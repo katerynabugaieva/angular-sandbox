@@ -1,0 +1,6 @@
+<div class="container">
+  <app-car-add-service></app-car-add-service>
+  <div class="list-group">
+    <app-car-service *ngFor="let car of cars" [car]="car"></app-car-service>
+  </div>
+</div>
