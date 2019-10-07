@@ -7,6 +7,9 @@ export class CarFilterPipe implements PipeTransform {
   transform(carList, searchString: string): any {
     if (carList.length === 0 || searchString === "") return carList;
 
-    return carList.filter(car => car.name === searchString);
+    return carList.filter(
+      car =>
+        car.name.toLowerCase().indexOf(searchString.toLocaleLowerCase()) !== -1
+    );
   }
 }
