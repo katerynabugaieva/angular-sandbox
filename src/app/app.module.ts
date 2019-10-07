@@ -13,6 +13,8 @@ import { PipesComponent } from "./pipes/pipes.component";
 import { PowPipe } from "./create-pipes/pow.pipe";
 import { CreatePipesComponent } from "./create-pipes/create-pipes.component";
 import { MyTestPipesPipe } from "./my-test-pipes.pipe";
+import { PipesFilterComponent } from './pipes-filter/pipes-filter.component';
+import { CarFilterPipe } from './car-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MyTestPipesPipe } from "./my-test-pipes.pipe";
     PipesComponent,
     CreatePipesComponent,
     PowPipe,
-    MyTestPipesPipe
+    MyTestPipesPipe,
+    PipesFilterComponent,
+    CarFilterPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
