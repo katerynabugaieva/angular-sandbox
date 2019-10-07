@@ -5,7 +5,6 @@ import { ConsoleService } from "../../console.service";
   selector: "app-car-service",
   templateUrl: "./car-service.component.html",
   styleUrls: ["./car-service.component.css"],
-  providers: [ConsoleService]
 })
 export class CarServiceComponent {
   @Input() car;

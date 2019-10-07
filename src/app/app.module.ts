@@ -18,6 +18,7 @@ import { CreateServiceComponent } from "./create-service/create-service.componen
 import { CarServiceComponent } from "./create-service/car/car-service.component";
 import { CarAddServiceComponent } from "./create-service/car-add/car-add-service.component";
 import { CarsService } from "./cars.service";
+import { ConsoleService } from "./console.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { CarsService } from "./cars.service";
     CarAddServiceComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [CarsService],
+  providers: [CarsService, ConsoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
