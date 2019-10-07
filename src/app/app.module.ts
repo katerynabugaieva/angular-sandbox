@@ -9,7 +9,9 @@ import { CarComponent } from "./car/car.component";
 import { AddCarComponent } from "./add-car/add-car.component";
 import { CreateDirectiveComponent } from "./create-directive/create-directive.component";
 import { BackgroundDirective } from "./create-directive/directives/background.directive";
-import { PipesComponent } from './pipes/pipes.component';
+import { PipesComponent } from "./pipes/pipes.component";
+import { PowPipe } from "./create-pipes/pow.pipe.ts";
+import { CreatePipesComponent } from "./create-pipes/create-pipes.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PipesComponent } from './pipes/pipes.component';
     AddCarComponent,
     CreateDirectiveComponent,
     BackgroundDirective,
-    PipesComponent
+    PipesComponent,
+    CreatePipesComponent,
+    PowPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
