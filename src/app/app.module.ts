@@ -17,6 +17,7 @@ import { CarFilterPipe } from "./car-filter.pipe";
 import { CreateServiceComponent } from "./create-service/create-service.component";
 import { CarServiceComponent } from "./create-service/car/car-service.component";
 import { CarAddServiceComponent } from "./create-service/car-add/car-add-service.component";
+import { CarsService } from "./cars.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { CarAddServiceComponent } from "./create-service/car-add/car-add-service
     CarAddServiceComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [CarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

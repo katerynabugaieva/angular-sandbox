@@ -13,7 +13,7 @@ export class CarServiceComponent {
   getClass() {
     return {
       "list-group-item-success": !this.car.isSold,
-      "list-group.item-danger": this.car.isSold,
+      "list-group-item-danger": this.car.isSold,
       "list-group-item": true
     };
   }
