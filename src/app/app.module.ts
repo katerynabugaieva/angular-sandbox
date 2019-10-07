@@ -9,6 +9,7 @@ import { CarComponent } from "./car/car.component";
 import { AddCarComponent } from "./add-car/add-car.component";
 import { CreateDirectiveComponent } from "./create-directive/create-directive.component";
 import { BackgroundDirective } from "./create-directive/directives/background.directive";
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BackgroundDirective } from "./create-directive/directives/background.di
     CarComponent,
     AddCarComponent,
     CreateDirectiveComponent,
-    BackgroundDirective
+    BackgroundDirective,
+    PipesComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
