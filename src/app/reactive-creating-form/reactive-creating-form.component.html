@@ -11,11 +11,14 @@
         <label>Email</label>
         <input type="text" class="form-control" formControlName="email" />
         <p
-          *ngIf="
-            form.get('user.email').invalid && form.get('user.email').touched
-          "
+          *ngIf="form.get('user.email').valid && form.get('user.email').touched"
         >
-          Введите корректный email
+          <span *ngIf="form.get('user.email').errors['email']"
+            >Введите корректный email</span
+          >
+          <span *ngIf="form.get('user.email').errors['emailIsUsed']"
+            >The email is used</span
+          >
         </p>
       </div>
       <div
