@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 
 @Component({
@@ -14,6 +14,10 @@ import { NgForm } from "@angular/forms";
   ]
 })
 export class CreatingFormComponent {
+  @ViewChild("form", { static: false }) form: NgForm;
+  isSubmited = false;
+  formData = {};
+
   answers = [
     {
       type: "yes",
@@ -28,6 +32,26 @@ export class CreatingFormComponent {
   defaultAnswer = "no";
   defaultCountry = "ua";
   submitForm(form: NgForm) {
-    console.log(form);
+    this.isSubmited = true;
+    this.formData = this.form.value;
+    this.form.reset();
+  }
+  addRandEmail() {
+    const randEmail = "test@gmail.com";
+    /*
+    this.form.setValue({
+      user: {
+        pass: "",
+        email: randEmail
+      },
+      country: "",
+      answer: ""
+    });
+    */
+    this.form.form.patchValue({
+      user: {
+        email: randEmail
+      }
+    });
   }
 }
