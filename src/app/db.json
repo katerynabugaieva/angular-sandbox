@@ -1,0 +1,27 @@
+{
+  "title": {
+    "value": "Auto manager"
+  },
+  "cars": [
+    {
+      "carName": "Ford",
+      "color": "blue",
+      "id": 1
+    },
+    {
+      "carName": "Mersedes",
+      "color": "grey",
+      "id": 2
+    },
+    {
+      "carName": "Bmw",
+      "color": "yellow",
+      "id": 3
+    },
+    {
+      "carName": "lada",
+      "color": "green",
+      "id": 4
+    }
+  ]
+}
