@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { HttpCarsService } from "./http-cars.service";
+import { Response } from "@angular/http";
 
 @Component({
   selector: "app-http-server",
@@ -11,8 +12,9 @@ export class HttpServerComponent {
   constructor(private carsService: HttpCarsService) {}
 
   loadCars() {
-    this.carsService.getCars().subscribe(response => {
-      console.log(response);
+    this.carsService.getCars().subscribe((response: Response) => {
+      const data = response.json();
+      this.cars = data;
     });
   }
 }
