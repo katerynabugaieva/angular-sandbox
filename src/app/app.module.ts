@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CarsComponent } from "./sandbox/cars/cars.component";
@@ -19,6 +19,8 @@ import { CarServiceComponent } from "./create-service/car/car-service.component"
 import { CarAddServiceComponent } from "./create-service/car-add/car-add-service.component";
 import { CarsService } from "./cars.service";
 import { ConsoleService } from "./console.service";
+import { CreatingFormComponent } from "./creating-form/creating-form.component";
+import { ReactiveCreatingFormComponent } from "./reactive-creating-form/reactive-creating-form.component";
 
 @NgModule({
   declarations: [
@@ -36,9 +38,11 @@ import { ConsoleService } from "./console.service";
     CarFilterPipe,
     CreateServiceComponent,
     CarServiceComponent,
-    CarAddServiceComponent
+    CarAddServiceComponent,
+    CreatingFormComponent,
+    ReactiveCreatingFormComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [CarsService, ConsoleService],
   bootstrap: [AppComponent]
 })
