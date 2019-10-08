@@ -30,7 +30,12 @@
         <p
           *ngIf="form.get('user.pass').invalid && form.get('user.pass').touched"
         >
-          Пароль не должен быть пустым!
+          <span *ngIf="form.get('user.pass').errors['required']"
+            >Empty password</span
+          >
+          <span *ngIf="form.get('user.pass').errors['lengthError']"
+            >Short password, use more than {{ charsCount }} numbers</span
+          >
         </p>
       </div>
     </div>
