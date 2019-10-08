@@ -22,7 +22,7 @@
       </button>
       <div
         class="form-group"
-        [ngClass]="{ 'has-error': pass.valid && pass.touched }"
+        [ngClass]="{ 'has-error': pass.invalid && pass.touched }"
       >
         <label>password</label>
         <input
