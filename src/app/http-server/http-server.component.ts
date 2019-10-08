@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { HttpCarsService } from "./http-cars.service";
 
 @Component({
   selector: "app-http-server",
@@ -6,11 +7,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./http-server.component.css"]
 })
 export class HttpServerComponent {
-  cars = [
-    {
-      name: "Ford",
-      color: "white",
-      id: 1
-    }
-  ];
+  cars = [];
+  constructor(private carsService: HttpCarsService) {}
+
+  loadCars() {
+    this.carsService.getCars().subscribe(response => {
+      console.log(response);
+    });
+  }
 }

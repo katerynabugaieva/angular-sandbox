@@ -23,6 +23,7 @@ import { AppComponent } from "./app.component";
 //import { ReactiveCreatingFormComponent } from "./reactive-creating-form/reactive-creating-form.component";
 import { HttpServerComponent } from "./http-server/http-server.component";
 import { HttpModule } from "@angular/http";
+import { HttpCarsService } from "./http-server/http-cars.service";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { HttpModule } from "@angular/http";
     //ReactiveFormsModule
     HttpModule
   ],
-  providers: [], //[CarsService, ConsoleService],
+  providers: [HttpCarsService], //[CarsService, ConsoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
