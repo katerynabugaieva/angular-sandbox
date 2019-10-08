@@ -24,6 +24,9 @@ export class CreatingFormComponent {
       text: "no"
     }
   ];
+
+  defaultAnswer = "no";
+  defaultCountry = "ua";
   submitForm(form: NgForm) {
     console.log(form);
   }
