@@ -21,6 +21,10 @@ import { CarsService } from "./cars.service";
 import { ConsoleService } from "./console.service";
 import { CreatingFormComponent } from "./creating-form/creating-form.component";
 import { ReactiveCreatingFormComponent } from "./reactive-creating-form/reactive-creating-form.component";
+import { RoutingComponent } from "./routing/routing.component";
+import { CarsPageComponent } from "./routing/cars-page/cars-page.component";
+import { HomePageComponent } from "./routing/home-page/home-page.component";
+import { RoutingCarsService } from "./routing/routing-cars.service";
 
 @NgModule({
   declarations: [
@@ -40,10 +44,13 @@ import { ReactiveCreatingFormComponent } from "./reactive-creating-form/reactive
     CarServiceComponent,
     CarAddServiceComponent,
     CreatingFormComponent,
-    ReactiveCreatingFormComponent
+    ReactiveCreatingFormComponent,
+    RoutingComponent,
+    CarsPageComponent,
+    HomePageComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [CarsService, ConsoleService],
+  providers: [CarsService, ConsoleService, RoutingCarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
