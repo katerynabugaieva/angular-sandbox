@@ -20,9 +20,14 @@ export class HttpServerComponent {
   constructor(private carsService: HttpCarsService) {}
 
   loadCars() {
-    this.carsService.getCars().subscribe((cars: Cars[]) => {
-      this.cars = cars;
-    });
+    this.carsService.getCars().subscribe(
+      (cars: Cars[]) => {
+        this.cars = cars;
+      },
+      error => {
+        alert(error);
+      }
+    );
   }
   addCar() {
     this.carsService.addCar(this.carName).subscribe((car: Cars) => {

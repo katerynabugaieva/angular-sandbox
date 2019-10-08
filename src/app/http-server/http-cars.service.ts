@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http, Response, Headers } from "@angular/http";
+import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class HttpCarsService {
@@ -11,7 +12,10 @@ export class HttpCarsService {
     });
     return this.http
       .get("http://localhost:3000/cars", { headers })
-      .map((response: Response) => response.json());
+      .map((response: Response) => response.json())
+      .catch((error: Response) => {
+        return Observable.throw("server is not here, try später");
+      });
   }
 
   addCar(carName: string) {
