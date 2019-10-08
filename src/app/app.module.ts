@@ -19,6 +19,7 @@ import { CarServiceComponent } from "./create-service/car/car-service.component"
 import { CarAddServiceComponent } from "./create-service/car-add/car-add-service.component";
 import { CarsService } from "./cars.service";
 import { ConsoleService } from "./console.service";
+import { CreatingFormComponent } from './creating-form/creating-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ConsoleService } from "./console.service";
     CarFilterPipe,
     CreateServiceComponent,
     CarServiceComponent,
-    CarAddServiceComponent
+    CarAddServiceComponent,
+    CreatingFormComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CarsService, ConsoleService],
