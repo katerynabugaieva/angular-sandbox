@@ -1,4 +1,4 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component } from "@angular/core";
 import { NgForm } from "@angular/forms";
 
 @Component({
@@ -7,7 +7,6 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./creating-form.component.css"]
 })
 export class CreatingFormComponent {
-  @ViewChild("form", { static: false }) form: NgForm;
   answers = [
     {
       type: "yes",
@@ -18,7 +17,7 @@ export class CreatingFormComponent {
       text: "no"
     }
   ];
-  submitForm() {
-    console.log(this.form);
+  submitForm(form: NgForm) {
+    console.log(form);
   }
 }
