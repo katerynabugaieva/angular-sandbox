@@ -1,11 +1,16 @@
 <div class="col-xs-8 col-xs-offset-2">
+  <hr />
+  <input type="text" class="form-control" [(ngModel)]="carName" />
   <button class="btn btn-primary" (click)="loadCars()">
     Download the cars
   </button>
+  <button class="btn btn-success" (click)="addCar()">Add the car</button>
   <hr />
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let car of cars">
-      <span class="badge"> {{ car.id }}</span> {{ car.name }} ({{ car.color }})
+      <span class="badge"> {{ car.id }}</span> {{ car.carName }} ({{
+        car.color
+      }})
     </li>
   </ul>
 </div>
