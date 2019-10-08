@@ -12,18 +12,13 @@
     },
     {
       "carName": "Bmw",
-      "color": "green",
+      "color": "yellow",
       "id": 3
     },
     {
-      "carName": "",
-      "color": "pink",
+      "carName": "lada",
+      "color": "green",
       "id": 4
-    },
-    {
-      "carName": "",
-      "color": "blue",
-      "id": 5
     }
   ]
 }
