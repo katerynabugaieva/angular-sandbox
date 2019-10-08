@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { HttpCarsService } from "./http-cars.service";
 import { AddCarComponent } from "../sandbox/add-car/add-car.component";
 import { filter } from "rxjs/operators";
@@ -13,21 +13,19 @@ interface Cars {
   templateUrl: "./http-server.component.html",
   styleUrls: ["./http-server.component.css"]
 })
-export class HttpServerComponent {
+export class HttpServerComponent implements OnInit {
   colors = ["red", "blue", "green", "yellow", "pink", "grey"];
-  cars: Cars[] = [];
+  cars: any;
   carName: string = "";
   constructor(private carsService: HttpCarsService) {}
+  appTitle;
+
+  ngOnInit() {
+    this.appTitle = this.carsService.getAppTitle();
+  }
 
   loadCars() {
-    this.carsService.getCars().subscribe(
-      (cars: Cars[]) => {
-        this.cars = cars;
-      },
-      error => {
-        alert(error);
-      }
-    );
+    this.cars = this.carsService.getCars();
   }
   addCar() {
     this.carsService.addCar(this.carName).subscribe((car: Cars) => {

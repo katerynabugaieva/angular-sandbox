@@ -1,4 +1,7 @@
 {
+  "title": {
+    "value": "Auto manager"
+  },
   "cars": [
     {
       "carName": "Ford",
