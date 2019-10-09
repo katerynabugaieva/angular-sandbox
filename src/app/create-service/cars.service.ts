@@ -1,4 +1,4 @@
-import { ConsoleService } from "./console.service";
+import { ConsoleService } from "../sandbox/console.service";
 import { Injectable } from "@angular/core";
 
 @Injectable()

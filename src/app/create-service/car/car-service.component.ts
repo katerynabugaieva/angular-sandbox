@@ -1,10 +1,10 @@
 import { Component, Input } from "@angular/core";
-import { ConsoleService } from "../../console.service";
+import { ConsoleService } from "../../sandbox/console.service";
 
 @Component({
   selector: "app-car-service",
   templateUrl: "./car-service.component.html",
-  styleUrls: ["./car-service.component.css"],
+  styleUrls: ["./car-service.component.css"]
 })
 export class CarServiceComponent {
   @Input() car;

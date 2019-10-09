@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-
+/*
 import { CarsComponent } from "./sandbox/cars/cars.component";
 import { CarComponent } from "./sandbox/car/car.component";
 import { AddCarComponent } from "./sandbox/add-car/add-car.component";
@@ -14,12 +14,12 @@ import { PowPipe } from "./create-pipes/pow.pipe";
 import { CreatePipesComponent } from "./create-pipes/create-pipes.component";
 import { MyTestPipesPipe } from "./my-test-pipes.pipe";
 import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
-import { CarFilterPipe } from "./car-filter.pipe";
+import { CarFilterPipe } from "./pipes-filter/car-filter.pipe";
 import { CreateServiceComponent } from "./create-service/create-service.component";
 import { CarServiceComponent } from "./create-service/car/car-service.component";
 import { CarAddServiceComponent } from "./create-service/car-add/car-add-service.component";
-import { CarsService } from "./cars.service";
-import { ConsoleService } from "./console.service";
+import { CarsService } from "./create-service/cars.service";
+import { ConsoleService } from "./sandbox/console.service";
 import { CreatingFormComponent } from "./creating-form/creating-form.component";
 import { ReactiveCreatingFormComponent } from "./reactive-creating-form/reactive-creating-form.component";
 import { RoutingComponent } from "./routing/routing.component";
@@ -28,12 +28,11 @@ import { HomePageComponent } from "./routing/home-page/home-page.component";
 import { RoutingCarsService } from "./routing/routing-cars.service";
 import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
 import { CarPageComponent } from "./routing/car-page/car-page.component";
-
-
+*/
 @NgModule({
   declarations: [
-    AppComponent,
-
+    AppComponent
+    /*
     CarsComponent,
     CarComponent,
     AddCarComponent,
@@ -54,15 +53,16 @@ import { CarPageComponent } from "./routing/car-page/car-page.component";
     CarsPageComponent,
     HomePageComponent,
     CarPageComponent
+    */
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,
-    AppRoutingCarsModule
+    AppRoutingModule
+    //  AppRoutingCarsModule
   ],
-  providers: [CarsService, ConsoleService, RoutingCarsService],
+  providers: [], // [CarsService, ConsoleService, RoutingCarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
