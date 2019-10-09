@@ -5,14 +5,16 @@ import { CarsPageComponent } from "./cars-page/cars-page.component";
 import { CarPageComponent } from "./car-page/car-page.component";
 
 const appRoutes: Routes = [
-  { path: "cars", component: CarsPageComponent },
-  { path: "cars/:id/:name", component: CarPageComponent },
+  {
+    path: "cars",
+    component: CarsPageComponent,
+    children: [{ path: ":id/:name", component: CarPageComponent }]
+  },
   { path: "", component: HomePageComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule],
-  declarations: [CarPageComponent]
+  exports: [RouterModule]
 })
 export class AppRoutingCarsModule {}

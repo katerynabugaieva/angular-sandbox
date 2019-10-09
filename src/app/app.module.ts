@@ -26,6 +26,7 @@ import { CarsPageComponent } from "./routing/cars-page/cars-page.component";
 import { HomePageComponent } from "./routing/home-page/home-page.component";
 import { RoutingCarsService } from "./routing/routing-cars.service";
 import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
+import { CarPageComponent } from "./routing/car-page/car-page.component";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
     ReactiveCreatingFormComponent,
     RoutingComponent,
     CarsPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    CarPageComponent
   ],
   imports: [
     BrowserModule,
