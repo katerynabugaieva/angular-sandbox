@@ -1,1 +1,7 @@
-<p>cars-page works!</p>
+<h2>Cars page</h2>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let car of cars">
+    <a href="">{{ car.name }}</a>
+  </li>
+</ul>
