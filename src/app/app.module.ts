@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+
 import { CarsComponent } from "./sandbox/cars/cars.component";
 import { CarComponent } from "./sandbox/car/car.component";
 import { AddCarComponent } from "./sandbox/add-car/add-car.component";
@@ -28,9 +29,11 @@ import { RoutingCarsService } from "./routing/routing-cars.service";
 import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
 import { CarPageComponent } from "./routing/car-page/car-page.component";
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
     CarsComponent,
     CarComponent,
     AddCarComponent,
