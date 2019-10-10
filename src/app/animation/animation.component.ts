@@ -40,11 +40,49 @@ import {
       transition("start <=> end", animate(1500)),
       transition("start => active", animate(400)),
       transition("active => end", animate("800ms 0.5s ease-out"))
+    ]),
+    trigger("multi", [
+      state(
+        "start",
+        style({
+          width: "150px",
+          height: "150px",
+          border: "5px solid black"
+        })
+      ),
+      state(
+        "end",
+        style({
+          width: "170px",
+          height: "170px",
+          background: "blue"
+        })
+      ),
+      transition("start <=> end", [
+        style({
+          background: "red"
+        }),
+        animate(
+          1500,
+          style({
+            background: "yellow"
+          })
+        ),
+        animate(
+          1000,
+          style({
+            width: "200px",
+            height: "200px"
+          })
+        ),
+        animate(1000)
+      ])
     ])
   ]
 })
 export class AnimationComponent {
   clickedDivState = "end";
+  multiState = "start";
   changeDivState() {
     setTimeout(() => {
       this.clickedDivState = "start";

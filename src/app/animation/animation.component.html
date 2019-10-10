@@ -1,7 +1,14 @@
-<div
+<!--<div
   [@clickedDiv]="clickedDivState"
   (click)="changeDivState()"
   (mousedown)="clickedDivState = 'active'"
 >
   hello
 </div>
+
+-->
+
+<div
+  (click)="multiState = multiState === 'start' ? 'end' : 'start'"
+  [@multi]="multiState"
+></div>
