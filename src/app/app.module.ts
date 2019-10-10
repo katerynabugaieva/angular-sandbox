@@ -11,6 +11,7 @@ import { HttpModule } from "@angular/http";
 import { SharedModule } from "./modules/shared/shared.module";
 import { AnimationModule } from "./animation/animation.module";
 import { AnimationComponent } from "./animation/animation.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 /*
 import { HttpModule } from "@angular/http";
 import { HttpServerComponent } from "./http-server/http-server.component";
@@ -75,7 +76,8 @@ import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
     ModulesAppRoutingModule,
     HttpModule,
     SharedModule,
-    AnimationModule
+    AnimationModule,
+    BrowserAnimationsModule
     //AppRoutingCarsModule
   ],
   providers: [],
