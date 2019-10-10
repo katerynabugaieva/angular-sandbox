@@ -8,7 +8,7 @@ import { ModulesHeaderComponent } from "./modules/modules-header/modules-header.
 import { ModulesHomePageComponent } from "./modules/modules-home-page/modules-home-page.component";
 import { ModulesAppRoutingModule } from "./modules/modules-app-routing.module";
 import { HttpModule } from "@angular/http";
-import { ModulesCarsModule } from "./modules/modules-cars-page/modules-cars.module";
+//import { ModulesCarsModule } from "./modules/modules-cars-page/modules-cars.module";
 import { SharedModule } from "./modules/shared/shared.module";
 /*
 import { HttpModule } from "@angular/http";
@@ -72,7 +72,7 @@ import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
     AppRoutingModule,
     ModulesAppRoutingModule,
     HttpModule,
-    ModulesCarsModule,
+    // ModulesCarsModule,
     SharedModule
     //AppRoutingCarsModule
   ],
