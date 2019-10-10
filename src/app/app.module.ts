@@ -8,8 +8,9 @@ import { ModulesHeaderComponent } from "./modules/modules-header/modules-header.
 import { ModulesHomePageComponent } from "./modules/modules-home-page/modules-home-page.component";
 import { ModulesAppRoutingModule } from "./modules/modules-app-routing.module";
 import { HttpModule } from "@angular/http";
-//import { ModulesCarsModule } from "./modules/modules-cars-page/modules-cars.module";
 import { SharedModule } from "./modules/shared/shared.module";
+import { AnimationModule } from "./animation/animation.module";
+import { AnimationComponent } from "./animation/animation.component";
 /*
 import { HttpModule } from "@angular/http";
 import { HttpServerComponent } from "./http-server/http-server.component";
@@ -33,14 +34,15 @@ import { CarServiceComponent } from "./create-service/car/car-service.component"
 import { CreateServiceComponent } from "./create-service/create-service.component";
 import { CarFilterPipe } from "./pipes-filter/car-filter.pipe";
 import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
-//import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
+import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
 */
 @NgModule({
   declarations: [
     AppComponent,
     ModulesComponent,
     ModulesHeaderComponent,
-    ModulesHomePageComponent
+    ModulesHomePageComponent,
+    AnimationComponent
     /*
     HttpServerComponent,
     CarsComponent,
@@ -72,8 +74,8 @@ import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
     AppRoutingModule,
     ModulesAppRoutingModule,
     HttpModule,
-    // ModulesCarsModule,
-    SharedModule
+    SharedModule,
+    AnimationModule
     //AppRoutingCarsModule
   ],
   providers: [],
