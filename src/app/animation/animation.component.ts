@@ -29,8 +29,17 @@ import {
           height: "300px"
         })
       ),
-      transition("start => end", animate(1500)),
-      transition("end => start", animate("800ms 0.5s ease-out"))
+      state(
+        "active",
+        style({
+          backgroundColor: "orange",
+          width: "320px",
+          height: "320px"
+        })
+      ),
+      transition("start <=> end", animate(1500)),
+      transition("start => active", animate(400)),
+      transition("active => end", animate("800ms 0.5s ease-out"))
     ])
   ]
 })
