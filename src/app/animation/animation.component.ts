@@ -92,4 +92,11 @@ export class AnimationComponent {
       this.clickedDivState = "start";
     }, 1000);
   }
+
+  onAnimationStart(event: AnimationEvent) {
+    console.log(event);
+  }
+  onAnimationDone(event: AnimationEvent) {
+    console.log(event);
+  }
 }

@@ -7,7 +7,7 @@
 </div>
 
 -->
-
+<!---
 <div
   (click)="multiState = multiState === 'start' ? 'end' : 'start'"
   [@multi]="multiState"
@@ -25,6 +25,7 @@
   Переключить
 </button>
 <hr />
+-->
 <!--<div-->
 <!--@divTrigger-->
 <!--class="alert alert-danger"-->
@@ -33,6 +34,7 @@
 <!--Lorem ipsum dolor sit amet.-->
 <!--</div>-->
 <hr />
+<!--
 <div
   [@changeWidth]="isVisible ? 'a' : 'b'"
   style="height: 250px; width: 200px; background-color: red;"
@@ -44,4 +46,16 @@
 <hr />
 <div @divTrigger class="alert alert-danger" *ngIf="isVisible">
   Lorem ipsum dolor sit amet.
+</div>
+//-->
+
+<button class="btn btn-primary" (click)="isVisible = !isVisible">Toggle</button>
+<div
+  @divTrigger
+  class="alert alert-danger"
+  (@divTrigger.start)="onAnimationStart($event)"
+  (@divTrigger.done)="onAnimationDone($event)"
+  *ngIf="isVisible"
+>
+  lorem ipsum
 </div>
