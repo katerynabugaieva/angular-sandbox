@@ -4,12 +4,12 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ModulesComponent } from "./modules/modules.component";
-import { ModulesCarPageComponent } from "./modules/modules-cars-page/modules-car-page/modules-car-page.component";
 import { ModulesHeaderComponent } from "./modules/modules-header/modules-header.component";
 import { ModulesHomePageComponent } from "./modules/modules-home-page/modules-home-page.component";
-import { ModulesCarsPageComponent } from "./modules/modules-cars-page/modules-cars-page.component";
 import { ColorDirective } from "../app/modules/shared/color.directives";
 import { ModulesAppRoutingModule } from "./modules/modules-app-routing.module";
+import { HttpModule } from "@angular/http";
+import { ModulesCarsModule } from "./modules/modules-cars-page/modules-cars.module";
 /*
 import { HttpModule } from "@angular/http";
 import { HttpServerComponent } from "./http-server/http-server.component";
@@ -39,11 +39,8 @@ import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
   declarations: [
     AppComponent,
     ModulesComponent,
-    ModulesCarsPageComponent,
-    ModulesCarPageComponent,
     ModulesHeaderComponent,
-    ModulesHomePageComponent,
-    ColorDirective
+    ModulesHomePageComponent
     /*
     HttpServerComponent,
     CarsComponent,
@@ -73,9 +70,10 @@ import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    ModulesAppRoutingModule
-    // HttpModule
-    // AppRoutingCarsModule
+    ModulesAppRoutingModule,
+    HttpModule,
+    ModulesCarsModule
+    //AppRoutingCarsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
