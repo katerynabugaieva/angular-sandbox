@@ -1,0 +1,61 @@
+<!--<div
+  [@clickedDiv]="clickedDivState"
+  (click)="changeDivState()"
+  (mousedown)="clickedDivState = 'active'"
+>
+  hello
+</div>
+
+-->
+<!---
+<div
+  (click)="multiState = multiState === 'start' ? 'end' : 'start'"
+  [@multi]="multiState"
+></div>
+
+<button class="btn btn-primary" (click)="isVisible = !isVisible">
+  Переключить
+</button>
+<hr />
+<div [@divTrigger]="'show'" class="alert alert-danger" *ngIf="isVisible">
+  Lorem ipsum dolor sit amet.
+</div>
+
+<button class="btn btn-primary" (click)="isVisible = !isVisible">
+  Переключить
+</button>
+<hr />
+-->
+<!--<div-->
+<!--@divTrigger-->
+<!--class="alert alert-danger"-->
+<!--*ngIf="isVisible"-->
+<!--&gt;-->
+<!--Lorem ipsum dolor sit amet.-->
+<!--</div>-->
+<hr />
+<!--
+<div
+  [@changeWidth]="isVisible ? 'a' : 'b'"
+  style="height: 250px; width: 200px; background-color: red;"
+></div>
+
+<button class="btn btn-primary" (click)="isVisible = !isVisible">
+  Переключить
+</button>
+<hr />
+<div @divTrigger class="alert alert-danger" *ngIf="isVisible">
+  Lorem ipsum dolor sit amet.
+</div>
+//-->
+
+<button class="btn btn-primary" (click)="isVisible = !isVisible">Toggle</button>
+<div
+  @divTrigger
+  class="alert alert-danger"
+  (@divTrigger.start)="onAnimationStart($event)"
+  (@divTrigger.done)="onAnimationDone($event)"
+  *ngIf="isVisible"
+>
+  lorem ipsum
+</div>
