@@ -7,8 +7,8 @@ import {
 } from "@angular/animations";
 
 export const divTrigger = trigger("divTrigger", [
-  state("show", style({})),
-  transition("void => show", [
+  // void => *
+  transition(":enter", [
     style({
       opacity: 0
     }),
@@ -19,8 +19,9 @@ export const divTrigger = trigger("divTrigger", [
       })
     )
   ]),
+  // * => void
   transition(
-    "show => void",
+    ":leave",
     animate(
       500,
       style({
@@ -28,4 +29,21 @@ export const divTrigger = trigger("divTrigger", [
       })
     )
   )
+]);
+
+export const changeWidthTrigger = trigger("changeWidth", [
+  transition("* => *", [
+    animate(
+      1000,
+      style({
+        height: "10px"
+      })
+    ),
+    animate(
+      1000,
+      style({
+        height: "*"
+      })
+    )
+  ])
 ]);

@@ -6,7 +6,7 @@ import {
   transition,
   animate
 } from "@angular/animations";
-import { divTrigger } from "./animation.animations";
+import { divTrigger, changeWidthTrigger } from "./animation.animations";
 
 @Component({
   selector: "app-animation",
@@ -79,10 +79,12 @@ import { divTrigger } from "./animation.animations";
         animate(1000)
       ])
     ]),
-    divTrigger
+    divTrigger,
+    changeWidthTrigger
   ]
 })
 export class AnimationComponent {
+  isVisible = false;
   clickedDivState = "end";
   multiState = "start";
   changeDivState() {
