@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 @Injectable({
   providedIn: "root"
 })
-export class RoutingCarsService {
+export class ModulesCarsService {
   cars = [
     {
       name: "Ford",
@@ -12,16 +12,22 @@ export class RoutingCarsService {
       color: "red"
     },
     {
-      name: "bmw",
+      name: "Audi",
       id: 2,
       year: 2010,
-      color: "blau"
+      color: "blue"
     },
     {
-      name: "mersedes",
+      name: "BMW",
       id: 3,
-      year: 2014,
-      color: "pink"
+      year: 2005,
+      color: "yellow"
+    },
+    {
+      name: "Mercedes",
+      id: 4,
+      year: 2000,
+      color: "grey"
     }
   ];
 }
