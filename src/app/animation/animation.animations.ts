@@ -1,5 +1,7 @@
 import {
   animate,
+  group,
+  keyframes,
   state,
   style,
   transition,
@@ -10,14 +12,30 @@ export const divTrigger = trigger("divTrigger", [
   // void => *
   transition(":enter", [
     style({
-      opacity: 0
+      width: "*",
+      height: "*"
     }),
-    animate(
-      500,
-      style({
-        opacity: 1
-      })
-    )
+    group([
+      animate(
+        3000,
+        style({
+          width: "200px",
+          height: "200px"
+        })
+      ),
+      animate(
+        6000,
+        keyframes([
+          style({ backgroundColor: "blue" }),
+          style({ backgroundColor: "yellow" }),
+          style({ backgroundColor: "pink" }),
+          style({ backgroundColor: "green" }),
+          style({ backgroundColor: "red" }),
+          style({ backgroundColor: "black" })
+        ])
+      )
+    ]),
+    animate(1000)
   ]),
   // * => void
   transition(
