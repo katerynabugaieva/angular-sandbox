@@ -12,3 +12,11 @@
   (click)="multiState = multiState === 'start' ? 'end' : 'start'"
   [@multi]="multiState"
 ></div>
+
+<button class="btn btn-primary" (click)="isVisible = !isVisible">
+  Переключить
+</button>
+<hr />
+<div [@divTrigger]="'show'" class="alert alert-danger" *ngIf="isVisible">
+  Lorem ipsum dolor sit amet.
+</div>

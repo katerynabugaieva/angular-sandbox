@@ -6,6 +6,7 @@ import {
   transition,
   animate
 } from "@angular/animations";
+import { divTrigger } from "./animation.animations";
 
 @Component({
   selector: "app-animation",
@@ -77,7 +78,8 @@ import {
         ),
         animate(1000)
       ])
-    ])
+    ]),
+    divTrigger
   ]
 })
 export class AnimationComponent {
