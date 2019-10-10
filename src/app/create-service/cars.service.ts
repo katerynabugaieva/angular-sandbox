@@ -1,7 +1,9 @@
 import { ConsoleService } from "../sandbox/console.service";
 import { Injectable } from "@angular/core";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class CarsService {
   constructor(private consoleService: ConsoleService) {}
   cars = [

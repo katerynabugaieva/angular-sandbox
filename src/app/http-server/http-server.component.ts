@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpCarsService } from "./http-cars.service";
-import { AddCarComponent } from "../sandbox/add-car/add-car.component";
 import { filter } from "rxjs/operators";
 
 interface Cars {

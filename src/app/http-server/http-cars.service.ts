@@ -2,7 +2,9 @@ import { Injectable } from "@angular/core";
 import { Http, Response, Headers } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class HttpCarsService {
   constructor(private http: Http) {}
 

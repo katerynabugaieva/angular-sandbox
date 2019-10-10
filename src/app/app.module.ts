@@ -10,6 +10,7 @@ import { ModulesHomePageComponent } from "./modules/modules-home-page/modules-ho
 import { ModulesCarsPageComponent } from "./modules/modules-cars-page/modules-cars-page.component";
 import { ColorDirective } from "../app/modules/shared/color.directives";
 import { ModulesAppRoutingModule } from "./modules/modules-app-routing.module";
+/*
 import { HttpModule } from "@angular/http";
 import { HttpServerComponent } from "./http-server/http-server.component";
 import { CarsComponent } from "./sandbox/cars/cars.component";
@@ -33,10 +34,7 @@ import { CreateServiceComponent } from "./create-service/create-service.componen
 import { CarFilterPipe } from "./pipes-filter/car-filter.pipe";
 import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
 //import { AppRoutingCarsModule } from "./routing/app-routing-cars.module";
-import { CarsService } from "./create-service/cars.service";
-import { ConsoleService } from "./sandbox/console.service";
-import { RoutingCarsService } from "./routing/routing-cars.service";
-import { ModulesCarsService } from "./modules/modules-cars.service";
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +43,9 @@ import { ModulesCarsService } from "./modules/modules-cars.service";
     ModulesCarPageComponent,
     ModulesHeaderComponent,
     ModulesHomePageComponent,
-    ColorDirective,
+    ColorDirective
+    /*
     HttpServerComponent,
-
     CarsComponent,
     CarComponent,
     AddCarComponent,
@@ -68,22 +66,18 @@ import { ModulesCarsService } from "./modules/modules-cars.service";
     CarsPageComponent,
     HomePageComponent,
     CarPageComponent
+    */
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    ModulesAppRoutingModule,
-    HttpModule
+    ModulesAppRoutingModule
+    // HttpModule
     // AppRoutingCarsModule
   ],
-  providers: [
-    ModulesCarsService,
-    CarsService,
-    ConsoleService,
-    RoutingCarsService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
