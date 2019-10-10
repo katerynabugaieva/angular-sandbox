@@ -7,7 +7,7 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 import { RoutingAuthGuard } from "./routing-auth-guard.service";
 import { NewPageComponent } from "./new-page/new-page.component";
 
-const appRoutes: Routes = [
+const appRoutesCar: Routes = [
   {
     path: "cars",
     component: CarsPageComponent,
@@ -21,7 +21,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(appRoutesCar)],
   exports: [RouterModule],
   declarations: [NotFoundComponent, NewPageComponent]
 })
