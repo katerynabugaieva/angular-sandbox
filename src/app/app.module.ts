@@ -6,10 +6,10 @@ import { AppComponent } from "./app.component";
 import { ModulesComponent } from "./modules/modules.component";
 import { ModulesHeaderComponent } from "./modules/modules-header/modules-header.component";
 import { ModulesHomePageComponent } from "./modules/modules-home-page/modules-home-page.component";
-import { ColorDirective } from "../app/modules/shared/color.directives";
 import { ModulesAppRoutingModule } from "./modules/modules-app-routing.module";
 import { HttpModule } from "@angular/http";
 import { ModulesCarsModule } from "./modules/modules-cars-page/modules-cars.module";
+import { SharedModule } from "./modules/shared/shared.module";
 /*
 import { HttpModule } from "@angular/http";
 import { HttpServerComponent } from "./http-server/http-server.component";
@@ -72,7 +72,8 @@ import { PipesFilterComponent } from "./pipes-filter/pipes-filter.component";
     AppRoutingModule,
     ModulesAppRoutingModule,
     HttpModule,
-    ModulesCarsModule
+    ModulesCarsModule,
+    SharedModule
     //AppRoutingCarsModule
   ],
   providers: [],
